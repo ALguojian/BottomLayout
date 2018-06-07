@@ -60,6 +60,8 @@ public class Adapter extends BaseQuickAdapter<String, BaseViewHolder> {
         textView.setTextSize(textSize);
         textView.setText(item);
 
+        imageView.setImageDrawable(ContextCompat.getDrawable(mContext, images.get(helper.getAdapterPosition())));
+
         if (mPosition == helper.getAdapterPosition()) {
             imageView.setSelected(true);
 
@@ -68,7 +70,6 @@ public class Adapter extends BaseQuickAdapter<String, BaseViewHolder> {
             imageView.setSelected(false);
             textView.setTextColor(ContextCompat.getColor(mContext, textNotSelectedColor));
         }
-        imageView.setImageDrawable(ContextCompat.getDrawable(mContext, images.get(helper.getAdapterPosition())));
     }
 
     public void setPosition(int position) {
