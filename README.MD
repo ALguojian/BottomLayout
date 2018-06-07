@@ -7,8 +7,19 @@
 
 
 使用如下：
+1. Add it in your root build.gradle at the end of repositories:
 
-1. 添加xml
+```
+maven { url 'https://jitpack.io' }
+```
+
+2. Add the dependency
+
+```
+implementation 'com.github.ALguojian:BottomLayout:1.0'
+```
+
+3. 添加xml
 
 ```
   <com.alguojian.bottomlayout.BottomLayout
@@ -17,7 +28,7 @@
         android:layout_height="50dp" />
 ```
 
-2. 添加资源文件
+4. 添加资源文件
 
 ```
  BottomLayout bottomLayout = findViewById(R.id.bottomLayout);
